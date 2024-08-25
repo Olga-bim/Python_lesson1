@@ -91,21 +91,32 @@
 
 # 14. Сохранение данных в JSON файл
 ## Определение: Для сохранения данных в формате JSON используется метод json.dump().
-    import json
+        import json
 
-    данные = {"имя": "Иван", "возраст": 30}
 
-    with open("данные.json", "w") as файл:
-        json.dump(данные, файл)
+    file_path = "contacts.json"
 
+    Ваш список контактов
+    contacts = [
+        {'user': 'sdfgs', 'email': 'agr'},
+        {'user': 'sdfhsb', 'email': 'sdhs'},
+        {'user': 'dfh', 'email': 'stfh'}
+    ]
+
+    Сохранение списка в файл
+    with open('contacts.json', 'w') as file:
+        json.dump(contacts, file, indent=4)  # indent=4 для красивого форматирования5
 
 # 15. Загрузка из JSON файла
 ## Определение: Для загрузки данных из JSON файла используется метод json.load().
-    with open("данные.json", "r") as файл:
-        данные = json.load(файл)
-    print(данные)
+    import json
 
+    Загрузка данных из файла JSON
+    with open('contacts.json', 'r') as file:
+        contacts = json.load(file)
 
+    Теперь contacts содержит данные из файла
+    print(contacts)
 # 16. try / except
 ## Определение: try / except используется для обработки исключений.
     try:

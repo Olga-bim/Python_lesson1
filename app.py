@@ -35,14 +35,68 @@
 
 
 # напечатать числа от 0 до -100 прыжком через 5
-for num in range(0, -101, -5):
-    print(num)
+# for num in range(0, -101, -5):
+#     print(num)
 
 
-    num = 0
-while num >= -100:
-    print(num)
-    num -= 5
+#     num = 0
+# while num >= -100:
+#     print(num)
+#     num -= 5
+
+
+
+# печатать числа меньше 10 пока не получим число больше 10
+# def numbers():
+#     while True:
+#         num = int(input("Write a number: "))  # Преобразуем ввод в целое число
+#         if num < 10:
+#             print(num)
+#         elif num > 10:
+#             break  # Завершение цикла и выход из функции
+
+# numbers()
+
+
+
+# FizzBuz 
+# Программа проходит числа от 1 до n (в данном случае, до 15).
+# Если число делится на 3 и на 5, выводится "FizzBuzz".
+# Если число делится только на 3, выводится "Fizz".
+# Если число делится только на 5, выводится "Buzz".
+# Если число не делится ни на 3, ни на 5, выводится само число.
+
+def fizz_buzz(n):
+    for i in range(1, n + 1):
+        if i % 3 == 0 and i % 5 == 0:
+            print("FizzBuzz")
+        elif i % 3 == 0:
+            print("Fizz")
+        elif i % 5 == 0:
+            print("Buzz")
+        else:
+            print(i)
+
+# Пример использования:
+fizz_buzz(20)
+
+
+
+def fizz_buzz(n):
+    i = 1
+    while i <= n:
+        if i % 3 == 0 and i % 5 == 0:
+            print("FizzBuzz")
+        elif i % 3 == 0:
+            print("Fizz")
+        elif i % 5 == 0:
+            print("Buzz")
+        else:
+            print(i)
+        i += 1  # Увеличиваем значение i на 1 в каждом цикле
+
+# Пример использования:
+fizz_buzz(15)
 
 # import json
 # import os
